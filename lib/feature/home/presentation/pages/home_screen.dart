@@ -10,6 +10,7 @@ import 'package:iconify_flutter/icons/ion.dart';
 import '../../data/models/category_model.dart';
 import '../bloc/category/category_bloc.dart';
 import '../widgets/category_widget.dart';
+import '../widgets/list_product_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -180,6 +181,23 @@ class _HomeScreenState extends State<HomeScreen> {
                     );
                   },
                 ),
+                const SizedBox(
+                  height: 16,
+                ),
+                SizedBox(
+                  height: sizes.height * 0.3,
+                  child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return listProducts(sizes);
+                      },
+                      separatorBuilder: (context, index) {
+                        return const SizedBox(
+                          width: 8,
+                        );
+                      },
+                      itemCount: 2),
+                )
               ],
             ),
           )

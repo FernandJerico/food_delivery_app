@@ -7,6 +7,7 @@ Color greyColor = const Color(0xff3B3B3B);
 Color lightGreyColor = const Color(0xffF4F4F4);
 Color whiteColor = const Color(0xffFFFFFF);
 Color redColor = const Color(0xffFF0000);
+Color goldColor = const Color(0xffFF9F06);
 
 Color onboardingDarkTextColor = const Color(0xff09051C);
 Color onboardingGreyTextColor = const Color(0xff4B5563);
