@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/feature/home/presentation/pages/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
@@ -60,7 +61,12 @@ class LoginFormWidget extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
                       shadowColor: Colors.transparent),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const HomeScreen();
+                    }));
+                  },
                   child: Text(
                     'Login',
                     style: GoogleFonts.poppins(
